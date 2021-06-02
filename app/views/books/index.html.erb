@@ -2,7 +2,11 @@
 <%= render "shared/header" %>
 
 <div class='book-index'>
-  <h1 class='title'>書籍一覧</h1> 
+  <div class='top-content'>
+    <h1 class='title'>書籍一覧</h1> 
+    <%= link_to '本を追加する',new_book_path, class: 'book-btn'  %>
+  </div>
+
   <ul class='book-lists'>
    <li class='list'>
     <div class='book-title'>本のタイトル</div>

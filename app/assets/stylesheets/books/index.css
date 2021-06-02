@@ -23,3 +23,8 @@
   border: 1px solid blue;
   background-color: blue;
 }
+.top-content{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
