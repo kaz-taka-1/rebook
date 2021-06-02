@@ -6,10 +6,17 @@
   <div class='center-content'>
     <div class='sarch-form'>検索ボックス</div>
   </div>
-  <div class='right-content'>
-    <div class='login'>ログイン</div>
-    <div class='new'>新規登録</div>
-  </div>
+  <ul class='right-content'>
+
+
+     <% if user_signed_in? %>
+        <%# <li><%= link_to current_user.nickname, "#", class: "user-nickname" %></li>  %>
+        <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "logout" %> </li> 
+      <% else %>
+        <li><%= link_to 'ログイン', new_user_session_path, class: "login" %></li>
+        <li><%= link_to '新規登録', new_user_registration_path, class: "sign-up" %></li>
+      <% end %>
+  </ul>
     
 
 

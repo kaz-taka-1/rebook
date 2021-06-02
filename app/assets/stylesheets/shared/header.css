@@ -29,7 +29,21 @@
   margin-right:10px;
   color: white;
 }
-.new {
+.sign-up{
+  width: 5vw;
+  border: 1px solid white;
+  padding: 0px auto ;
+  margin-right:10px;
+  color: white;
+}
+.user-nickname {
+  width: 5vw;
+  border: 1px solid white;
+  padding: 0px auto ;
+  margin-right:10px;
+  color: white;
+}
+.logout {
   width: 5vw;
   border: 1px solid white;
   padding: 0px auto ;
