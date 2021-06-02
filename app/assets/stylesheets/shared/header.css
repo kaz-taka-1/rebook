@@ -1,0 +1,38 @@
+* {
+  box-sizing: border-box;
+}
+.top-page-header {
+  height:10vh;
+  padding: 2vh 5vw;
+  background-color: rgb(005, 033, 092);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.right-content{
+  display: flex;
+  justify-content: flex-end;
+  color: white;
+}
+.rebook-icon {
+  width: 5vw;
+  color: white;
+  
+}
+.sarch-form{
+  color: white;
+}
+.login {
+  width: 5vw;
+  border: 1px solid white;
+  padding: 0px auto ;
+  margin-right:10px;
+  color: white;
+}
+.new {
+  width: 5vw;
+  border: 1px solid white;
+  padding: 0px auto ;
+  margin-right:10px;
+  color: white;
+}
