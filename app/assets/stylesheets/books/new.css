@@ -2,3 +2,6 @@
   width: 5vw;
   height: 5vh;
 }
+.book-add-main{
+  display: flex;
+}

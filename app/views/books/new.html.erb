@@ -1,0 +1,27 @@
+<%= render "shared/header" %>
+
+<div class='book-add-main'>
+  <div class="book-add">本の内容を入力</div>
+    <%= form_with model: @book, local: true do |f| %>
+  <div class="book-title">
+    <p>本のタイトル</p>
+    <%= f.text_area :book_title, class:"book-text", id:"book-title", placeholder:"本のタイトルを入力" %>
+  </div>
+  <div class="book-author">
+    <p>本の著者</p>
+    <%= f.text_area :author, class:"book-text", id:"book-author", placeholder:"本の著者を入力" %>
+  </div>
+  <div class="book-page">
+    <p>本の総ページ数</p>
+    <%= f.text_area :total_page,class:"book-text", id:"book-page", placeholder:"本の総ページを入力" %>
+  </div>
+  <div class="book-image">
+    <p>本の画像</p>
+    <%= f.file_field :image, id:"book-title" %>
+  </div>
+  <div class="sell-btn-contents">
+    <%= f.submit "登録する" ,class:"sell-btn" %> 
+    <%=link_to 'もどる', root_path, class:"back-btn" %>
+  </div>
+  <% end %>
+</div>
