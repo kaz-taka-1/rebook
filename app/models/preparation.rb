@@ -1,8 +1,8 @@
 class Preparation < ApplicationRecord
-  t.reason,             null: false
-      t.get_ability,        null: false
-      t.status,             null: false
-      t.prior_knowledge,    null: false
-      t.unknown,            null: false
-      t.book,               null: false , foreign_key: true
+  validate :reason
+  validate :get_ability
+  validate :status
+  validate :prior_knowledge
+  validate :unknown
+  validate :book_id
 end

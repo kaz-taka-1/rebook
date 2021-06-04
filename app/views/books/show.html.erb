@@ -2,12 +2,14 @@
 <div class='action-icons'>
 
   <div class='action-icon'>
-    <h1>読む前の準備</h1>
-    <ul class='preparation-list'>
-      <li>メンタルマップ</li>
-      <li>キュリオシティギャップ</li>
-      <li>質問読み</li>
-    </ul>
+    <%= link_to new_book_preparation_path(@book.id) do%>
+      <h1>読む前の準備</h1>
+      <ul class='preparation-list'>
+        <li>メンタルマップ</li>
+        <li>キュリオシティギャップ</li>
+        <li>質問読み</li>
+      </ul>
+    <%end%>
   </div>
 
   <div class='action-icon'>
