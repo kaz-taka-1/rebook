@@ -16,6 +16,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  /* background-image: url(".../images/51toc9+oErL._SY344_BO1,204,203,200_.jpg"); */
 }
 .list{
   width: 20vw;
@@ -27,4 +28,8 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.book-index{
+  
 }

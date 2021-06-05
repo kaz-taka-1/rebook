@@ -2,6 +2,7 @@
 <%= render "shared/header" %>
 
 <div class='book-index'>
+
   <div class='top-content'>
     <h1 class='title'>書籍一覧</h1> 
     <%= link_to '本を追加する',new_book_path, class: 'book-btn'  %>
@@ -10,7 +11,7 @@
   <ul class='book-lists'>
   
     <% @book.each do |book|%>
-      <%= link_to book_preparations_path(book.id) do %>
+      <%= link_to book_path(book.id) do %>
         <li class='list'>
           <div class='book-image'>
             <%= image_tag book.image.variant(resize: '350x500'), class: "book-img" %>

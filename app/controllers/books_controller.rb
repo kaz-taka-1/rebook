@@ -15,7 +15,13 @@ class BooksController < ApplicationController
       render :new
     end
   end
-  
+
+  def show
+    @book= Book.find(params[:id])
+    if Preparation.exists?(book_id:@book.id)
+      @preparation=Preparation.includes(:book)
+    end
+  end
 
   def book_params
     params.require(:book).permit(:book_title, :author, :total_page, :image).merge(user_id: current_user.id)

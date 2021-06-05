@@ -6,8 +6,6 @@ class CreateBooks < ActiveRecord::Migration[6.0]
       t.integer :total_page,      null: false 
       t.integer :read_page
       t.references :user,         null: false , foreign_key: true
-      # t.references :preparation,  null: false , foreign_key: true
-      # t.references :output,       null: false , foreign_key: true
       t.timestamps
     end
   end

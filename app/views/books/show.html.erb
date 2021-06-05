@@ -13,7 +13,9 @@
   </div>
 
   <div class='action-icon'>
+  <%= link_to book_preparations_path(book_id:@book.id),method: :get do %>
     <h1>本を読む</h1>
+  <%end%>
   </div>
 
   <div class='action-icon'>
