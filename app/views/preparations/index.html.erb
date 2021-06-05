@@ -1,0 +1,30 @@
+<%= render "shared/header" %>
+<div class='action-icons'>
+
+  <div class='action-icon'>
+    <%= link_to new_book_preparation_path do%>
+      <h1>読む前の準備</h1>
+      <ul class='preparation-list'>
+        <li>メンタルマップ</li>
+        <li>キュリオシティギャップ</li>
+        <li>質問読み</li>
+      </ul>
+    <%end%>
+      <%# <%= link_to "編集する",edit_book_preparations_path(@book.id,@preparation.id)  %> %>
+  </div>
+
+  <div class='action-icon'>
+    <%= link_to new_book_preparation_path do%>
+    <h1>本を読む</h1>
+    <%end%>
+  </div>
+
+  <div class='action-icon'>
+    <div>読書を振り返る</div>
+  </div>
+
+  <div class='action-icon'>
+    <div>瞑想</div>
+  </div>
+
+</div>

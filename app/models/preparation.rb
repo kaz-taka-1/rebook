@@ -5,4 +5,6 @@ class Preparation < ApplicationRecord
   validate :prior_knowledge
   validate :unknown
   validate :book_id
+
+  belongs_to :book
 end

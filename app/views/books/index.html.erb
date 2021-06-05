@@ -10,7 +10,7 @@
   <ul class='book-lists'>
   
     <% @book.each do |book|%>
-      <%= link_to book_path(book.id) do %>
+      <%= link_to book_preparations_path(book.id) do %>
         <li class='list'>
           <div class='book-image'>
             <%= image_tag book.image.variant(resize: '350x500'), class: "book-img" %>

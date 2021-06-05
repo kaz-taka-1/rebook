@@ -4,5 +4,6 @@ class Book < ApplicationRecord
   validate :total_page
 
   belongs_to :user
+  belongs_to :preparation
   has_one_attached :image
 end
