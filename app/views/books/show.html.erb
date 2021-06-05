@@ -10,7 +10,12 @@
         <li>質問読み</li>
       </ul>
     <%end%>
+    
   </div>
+
+  <%# <%= link_to edit_book_preparation_path(@book.id,@preparation.id) do %> 
+    <%# <h1>編集する</h1> %>
+  <%# <% end %> 
 
   <div class='action-icon'>
   <%= link_to book_preparations_path(book_id:@book.id),method: :get do %>

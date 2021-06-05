@@ -1,8 +1,7 @@
 class PreparationsController < ApplicationController
   def index
     @book= Book.find(params[:book_id])
-    @preparation=Preparation.includes(:book)
-    binding.pry
+    @preparation=Preparation.find_by(book_id:@book.id)
   end
 
   def new

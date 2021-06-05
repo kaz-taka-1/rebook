@@ -19,7 +19,7 @@ class BooksController < ApplicationController
   def show
     @book= Book.find(params[:id])
     if Preparation.exists?(book_id:@book.id)
-      @preparation=Preparation.includes(:book)
+      @preparation=Preparation.find_by(book_id:@book.id)
     end
   end
 
