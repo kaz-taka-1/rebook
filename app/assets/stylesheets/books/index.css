@@ -1,35 +1,47 @@
-.book-index{
-  background-color:white;
-  width: 100vw;
-  height: 100vh;
-}
+
 .book-index{
   width: 100vw;
-  height: 100vh;
-  background-color: tomato;
+  height: 100vh; 
+  background-image: url(top.jpg);
+  /* background-color: teal; */
+  background-size: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
 }
 
 .book-lists{
-  width: 100vw;
+  width: 90vw;
   height: 70vh;
-  background-color: white;
+  margin: 100px,100px;
+  /* background-color: white; */
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   /* background-image: url(".../images/51toc9+oErL._SY344_BO1,204,203,200_.jpg"); */
+  
+  position:relative;
 }
 .list{
   width: 20vw;
   height: 65vh;
-  border: 1px solid blue;
-  background-color: blue;
+  background-color: rgb(005, 033, 092);
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  
 }
 .top-content{
   display: flex;
   justify-content: space-between;
   align-items: center;
+  /* background-color: rgb(237, 241, 243); */
 }
 
-.book-index{
-  
+
+.list-box{
+  display: flex;
+  justify-content: space-between;
 }

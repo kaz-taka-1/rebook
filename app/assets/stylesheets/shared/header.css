@@ -1,10 +1,10 @@
 * {
   box-sizing: border-box;
 }
-.top-page-header {
+.header-top-content {
   height:10vh;
   padding: 2vh 5vw;
-  background-color: rgb(005, 033, 092);
+  background-color: rgb(001, 093, 178);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -24,29 +24,30 @@
 }
 .login {
   width: 5vw;
-  border: 1px solid white;
   padding: 0px auto ;
   margin-right:10px;
   color: white;
 }
 .sign-up{
   width: 5vw;
-  border: 1px solid white;
   padding: 0px auto ;
   margin-right:10px;
   color: white;
 }
 .user-nickname {
   width: 5vw;
-  border: 1px solid white;
   padding: 0px auto ;
   margin-right:10px;
   color: white;
 }
 .logout {
   width: 5vw;
-  border: 1px solid white;
   padding: 0px auto ;
   margin-right:10px;
   color: white;
+}
+
+.link-top-page{
+  height: 5vh;
+  width: calc( 100vw / 3vw );
 }
