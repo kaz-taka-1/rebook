@@ -19,12 +19,14 @@
 
   <div class='action-icon'>
   <%= link_to book_preparations_path(book_id:@book.id),method: :get do %>
-    <h1>本を読む</h1>
+    <h1></h1>
   <%end%>
   </div>
 
   <div class='action-icon'>
-    <div>読書を振り返る</div>
+  <%= link_to new_book_output_path(book_id:@book.id) do %>
+    <h1>要約</h1>
+  <%end%>
   </div>
 
   <div class='action-icon'>

@@ -5,5 +5,6 @@ class Book < ApplicationRecord
 
   belongs_to :user
   has_one :preparation
+  has_one :output
   has_one_attached :image
 end
