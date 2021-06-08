@@ -4,15 +4,23 @@
   <div class='top-content'>
     <h1 class='title'>書籍一覧</h1> 
     <%= link_to '本を追加する',new_book_path, class: 'book-btn'  %>
-  </div>
-<div class='book-index'>
+  <%# </div>
+<%# <div class='book-index'>
   <div class='list-box'>
-  <ul class='book-lists'>
+  
+  </div> %>
+<%# </div> %> %> %> %> %> %> %> %>
+<div class='index'>
+<div class="slider">
+  
+  <div class="slides">
+    <div id="slide-1">
+      <ul class='book-lists'>
     <% @book.each do |book|%>
-      <%= link_to book_path(book.id) do %>
+       <%= link_to book_path(book.id) do %>
         <li class='list'>
           <div class='book-image'>
-            <%= image_tag book.image.variant(resize: '350x500'), class: "book-img" %>
+            <%= image_tag book.image, class: "book-img" %>
           </div>
           <h3 class='book-title'>
             <span>本のタイトル：<%= book.book_title %></span>
@@ -22,7 +30,33 @@
           </div>
         </li>
       <% end %>
-    <% end %>
+    <% end %> %>
   </ul>
+    </div>
+    <div id="slide-2">
+      2
+    </div>
+    <div id="slide-3">
+      3
+    </div>
+    <div id="slide-4">
+      4
+    </div>
+    <div id="slide-5">
+      5
+    </div>
+    <div id="slide-5">
+      5
+    </div>
+    <div id="slide-5">
+      5
+    </div>
+    <div id="slide-5">
+      5
+    </div>
+    <div id="slide-5">
+      5
+    </div>
   </div>
+</div>
 </div>

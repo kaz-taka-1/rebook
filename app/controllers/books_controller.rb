@@ -21,6 +21,9 @@ class BooksController < ApplicationController
     if Preparation.exists?(book_id:@book.id)
       @preparation=Preparation.find_by(book_id:@book.id)
     end
+    if Output.exists?(book_id:@book.id)
+      @output=Output.find_by(book_id:@book.id)
+    end
   end
 
   def book_params

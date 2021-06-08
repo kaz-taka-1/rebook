@@ -6,9 +6,10 @@ class PreparationsController < ApplicationController
 
   def new
     @book=Book.find(params[:book_id])
-    @preparation=Preparation.new
     if Preparation.exists?(book_id:@book.id)
       redirect_to book_path(@book.id)
+    else
+      @preparation=Preparation.new
     end
 
   end
@@ -25,10 +26,11 @@ class PreparationsController < ApplicationController
 
   # def show
   # end
-  # def edit
-  #   @book = book.find(params[:book_id])
+  def edit
+     @book = Book.find(params[:book_id])
+     @preparation=Preparation.find_by(book_id:@book.id)
 
-  # end
+   end
 
   # def update
   #   @preparation=Preparation.news (preparation_params)
