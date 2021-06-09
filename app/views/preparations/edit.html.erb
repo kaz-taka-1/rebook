@@ -1,33 +1,25 @@
 <%= render "shared/header" %>
 <div class='preparations'>
- 
+  <%= form_with model: @preparation, url: book_preparation_path(@book.id,@preparation.id), local: true do |f| %>
   <div class='preparation'>
-
-    <%= form_with model: @preparation, url: book_preparations_path(@book.id), local: true do |f| %>
     <div class='mental-map'>メンタルマップ</div>
-
     <div class='reason'>なぜこの本を読もうと思ったのか？</div> 
     <%=f.text_area :reason,class:"reason", placeholder:"例：1ヶ月に体重を１キロずつ落としたい"%>
-    
     <div class='get-ability'>この本から何を得たいのか？</div>
     <%=f.text_area :get_ability,class:"ability", placeholder:"例：異動先の若手と良好な関係を築くためのノウハウが知りたい"%>
-    
-    <div class='get-ability'>読んだ後、どのような状態になりたいと願っているのか？</div>
+    <div class='status'>読んだ後、どのような状態になりたいと願っているのか？</div>
     <%=f.text_area :status,class:"status", placeholder:"例：ストレスをコントロールする方法を学び、しんどい状況を改善させてい"%>
-    
   </div>
 
   <div class='curiosity-gap'>
-    <div class='mental-map'>ギュリオシティーギャップ</div>
+    <div class='curiosity-gap-text'>ギュリオシティーギャップ</div>
     <div class='prior-knowledge'>自分があらかじめ持っている知識</div> 
     <%=f.text_area :prior_knowledge,class:"prior-knowledge", placeholder:"例：ストーリーテリングについて"%>
-
     <div class='unknown'>本の中に書かれた自分が知らない知識</div> 
     <%=f.text_area :unknown,class:"unknown", placeholder:"例：マインドフルスピーキングとは？"%>
-    
   </div>
-
-  <%= f.submit "登録する" ,class:"sell-btn" %> 
-  
+  <div class='login-red-btn'>
+    <%= f.submit "登録する" ,class:"sell-btn" %> 
+  </div>
   <%end%>
 </div>

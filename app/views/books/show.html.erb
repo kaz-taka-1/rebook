@@ -53,7 +53,9 @@
     <%end%>
     <div class='book-show-output'>
       <%if Output.exists?(book_id:@book.id)%>
+        <%= link_to edit_book_output_path(book_id:@book.id) do %>
         <%=@output.text%>
+        <%end%>
       <%else%>
         <%= link_to new_book_output_path(book_id:@book.id) do %>
         <h1>要約</h1>

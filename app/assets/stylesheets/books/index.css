@@ -1,76 +1,28 @@
 
-.book-index{
-  width: 100vw;
-  height: 100vh; 
-  background-image: url(top.jpg);
-  background-size: 100vw;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  
-}
-.list-box{
-  width: 80vw;
-  height: 80vh;
-  display: flex;
-  justify-content: space-around;
-}
 
-.book-lists{
-  width: 100%;
-  height: 100%;
-  display: flex;
-  overflow-x: auto;
-  scroll-snap-type: x mandatory;
-  
-}
-.list{
-  width: 100%;
-  height: 80%;
-  background-color: rgb(005, 033, 092);
-  margin-left: 100px;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
-  scroll-snap-align: start;
-}
 .top-content{
   display: flex;
   justify-content: space-between;
   align-items: center;
   
 }
-.book-img{
-  width: 100%;
-}
+
 
 * {
   box-sizing: border-box;
 }
-.index{
-  height: 100vh;
-  width: 100%;
-  display:flex;
-  align-items: center;
-  justify-content: center;
-
-}
 .slider {
   width: 80vw;
-
+  height: 90vh;
   text-align: center;
   overflow: hidden;
 }
  
 .slides {
+  height: 100%;
   display: flex;
-  
   overflow-x: auto;
   scroll-snap-type: x mandatory;
-  
-  
-  
   scroll-behavior: smooth;
   -webkit-overflow-scrolling: touch;
 }
@@ -92,8 +44,8 @@
 .slides > div {
   scroll-snap-align: start;
   flex-shrink: 0;
-  width: 300px;
-  height: 300px;
+  width: 500px;
+  height: 90%;
   margin-right: 50px;
   border-radius: 10px;
   background: #eee;
@@ -107,3 +59,49 @@
   align-items: center;
   font-size: 100px;
 }
+.book-index{
+  width: 100vw;
+  height: 100vh; 
+  background-image: url(top.jpg);
+  background-size: 100vw;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  
+}
+.list-box{
+  display: flex;
+  justify-content: space-around;
+}
+
+.book-lists{
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  
+}
+.list{
+  width: 500px;
+  height: 90%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+.book-top-title{
+  font-size: 30%;
+}
+.book-top-page{
+  font-size: 30%;
+}
+.book-image{
+  width: 100%;
+  height: 100%;
+}
+ 
+ .book-img{
+  max-width:500px;
+  max-height:500px;
+  min-width:400px;
+  min-height:400px;
+ }
