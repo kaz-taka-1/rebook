@@ -35,7 +35,7 @@
   height: 10px;
 }
 .slides::-webkit-scrollbar-thumb {
-  background: black;
+  background: white;
   border-radius: 10px;
 }
 .slides::-webkit-scrollbar-track {
@@ -89,10 +89,13 @@
   align-items: center;
 }
 .book-top-title{
-  font-size: 30%;
+  font-size: 20%;
 }
 .book-top-page{
-  font-size: 30%;
+  font-size: 20%;
+}
+.book-top-author{
+  font-size: 20%;
 }
 .book-image{
   width: 100%;

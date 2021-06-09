@@ -19,6 +19,7 @@
             <%= image_tag book.image, class: "book-img" %>
           </div>
             <p class='book-top-title'>本のタイトル：<%= book.book_title %></p>
+            <p class='book-top-author'>著者：<%= book.author %></p>
             <span class='book-top-page'><%= book.total_page %>ページ</span>
         </li>
       <% end %>

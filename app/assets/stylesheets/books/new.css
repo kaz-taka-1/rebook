@@ -1,7 +1,49 @@
-.book-add-icon{
-  width: 5vw;
-  height: 5vh;
-}
+
 .book-add-main{
+ width: 100vw;
+ height: 100vh;
+ display: flex;
+  justify-content: center;
+  background-image: url(top2.jpg);
+}
+.book-add{
+  width: 50%;
+  height: 50%;
+  margin-top:100px;
+  height: 100vh;
   display: flex;
+  justify-content: center;
+}
+.book-new{
+  display: flex;
+  justify-content: center;
+  color: white;
+  font-size: 50px;
+}
+.book-add-title{
+  width: 500px;
+  display: flex;
+  justify-content: center;
+  padding:0,auto;
+  color: white;
+  font-size: 25px;
+}
+.submit{
+  display: flex;
+  justify-content: center;
+}
+.book-link-back{
+  display: flex;
+  justify-content: center;
+  margin-top:20px;
+  color: white;
+}
+.book-add-image{
+  display: flex;
+  justify-content: center;
+  margin-left:20%;
+  color: white;
+}
+.book-new-form{
+  width: 100%;
 }
