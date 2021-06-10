@@ -5,7 +5,7 @@
  
   <ul class='book-info'>
   <li class='book-show'>
-    <%= link_to book_preparations_path(book_id:@book.id),method: :get do %>
+    <%= link_to edit_book_path(book_id:@book.id),method: :get do %>
     <div class='book-show-image'>
       <%= image_tag @book.image, class: "book-show-img" %>
     </div>
