@@ -28,6 +28,7 @@ class BooksController < ApplicationController
       @output=Output.find_by(book_id:@book.id)
     end
   end
+  
 
   def book_params
     params.require(:book).permit(:book_title, :author, :total_page, :image).merge(user_id: current_user.id)
