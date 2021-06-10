@@ -29,6 +29,10 @@
       <div class='btn'>
         <%= f.submit "登録する" ,class:"sell-btn" %> 
       </div>
+      <div class='link-back'>
+        <%=link_to 'もどる', book_path(@book.id), class:"back-btn" %>
+      </div>
+    
     <%end%>
   </div>
 </div>

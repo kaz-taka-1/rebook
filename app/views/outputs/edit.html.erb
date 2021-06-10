@@ -1,13 +1,18 @@
 <%= render "shared/header" %>
 
 <div class='book-wrapup'>
-  
-    <%= form_with model: @output, url:book_outputs_path(@book.id),local: true do |f| %>
-      <div class='book-wrapup-text'>
-        <%= f.text_area :text, class:"book-text", placeholder:"本の要約を入力" %>
-        <%= f.submit "登録する" ,class:"sell-btn" %> 
-      </div>
-    <% end %>
-    <%=link_to '戻る',book_path(@book.id)%>
-  
+    <div class='text-box'>
+      <%= form_with model: @output, url:book_outputs_path(@book.id),local: true do |f| %>
+        <div class='out-text'>本の要約を入力</div>
+        <div class='output-box'>
+          <%= f.text_area :text, class:"output-form", placeholder:"本の要約を入力",size: "150x30" %>
+        </div>
+        <div class='btn'>
+         <%= f.submit "登録する" ,class:"sell-btn" %> 
+        </div>
+        <div class='link-back'>
+         <%=link_to '戻る',book_path(@book.id)%>
+        </div>
+      <% end %>
+    </div>
 </div>

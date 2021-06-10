@@ -2,15 +2,48 @@
   height:100vh;
   width: 100vw;
   background-size:contain;
-  background-image: url(top2.jpg);
+  background-image: url('top2.jpg');
   background-repeat: no-repeat;
   background-size: cover;
+  display: flex;
+  justify-content:center;
+  
 }
 .book-wrapup-text{
   height:500px;
   width: 500px;
   display: flex;
-  justify-content:space-around;
+  justify-content:center;
   align-items: center;
   flex-direction: column;
+}
+.output-from{
+  width: 100%;
+  height: 100%;
+}
+.text-box{
+  display: flex;
+  justify-content:center;
+  align-items: center;
+}
+.out-text{
+
+  display: flex;
+  justify-content:center;
+}
+.text-box{
+  margin-top:10px;
+  width: 80%;
+  height: 90%;
+  display: flex;
+  justify-content:center;
+  background-image: url('p0050_m.jpeg');
+}
+.out-box{
+  width: 500px;
+  height: 500px;
+}
+input[type="text"] {
+  width: 300px;
+  height: 600px;
 }
