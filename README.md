@@ -1,4 +1,30 @@
-# README
+# re3-book
+# アプリケーションの概要
+読書の習慣化と本から得た知識を定着を図るアプリケーションです。つまり本を読んでも本から得た知識をすぐに忘れてしまったり、積読状態になってしまう本をなくそうというのがコンセプトのアプリです。
+このアプリケーションを
+
+# 使用言語・技術
+
+# デプロイ後のURL
+
+# テス用トアカウント
+
+
+## DEMO
+
+## トップ画面
+
+## ユーザー新規画面
+
+## ブック詳細画面
+
+## 要約投稿画面
+
+## 
+
+
+
+
 
 # re3-bookのテーブル設計
 ##  booksテーブル
@@ -11,6 +37,9 @@
 |user                | references | null: false , foreign_key: true |
 
 ### Association
+belongs_to :user
+has_one :preparation
+has_one :output
 
 
 
@@ -25,7 +54,7 @@
 | book               | references  | null: false              |
 
 ### Association
-
+belongs_to :book
 
 
 ## outputs テーブル
@@ -36,7 +65,6 @@
 | book               | references  | null: false              |
 
 ### Association
-belongs_to :user
-has_one :purchase
+belongs_to :book
 
 
