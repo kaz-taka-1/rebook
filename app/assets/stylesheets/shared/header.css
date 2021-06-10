@@ -13,12 +13,20 @@
   display: flex;
   justify-content: flex-end;
   color: white;
+
 }
-.rebook-icon {
-  width: 5vw;
-  color: white;
-  
+.left{
+  width: 100px;
 }
+.center-content{
+  position: absolute;
+}
+.sarch-form{
+  background-image: url('app/assets/images/re3-book.png');
+  position: relative;
+
+}
+
 .sarch-form{
   color: white;
 }
