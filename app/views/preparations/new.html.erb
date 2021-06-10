@@ -1,25 +1,34 @@
 <%= render "shared/header" %>
-<div class='preparations'>
-  <%= form_with model: @preparation, url: book_preparations_path(@book.id), local: true do |f| %>
-  <div class='preparation'>
-    <div class='mental-map'>メンタルマップ</div>
-    <div class='reason'>なぜこの本を読もうと思ったのか？</div> 
-    <%=f.text_area :reason,class:"reason", placeholder:"例：1ヶ月に体重を１キロずつ落としたい"%>
-    <div class='get-ability'>この本から何を得たいのか？</div>
-    <%=f.text_area :get_ability,class:"ability", placeholder:"例：異動先の若手と良好な関係を築くためのノウハウが知りたい"%>
-    <div class='status'>読んだ後、どのような状態になりたいと願っているのか？</div>
-    <%=f.text_area :status,class:"status", placeholder:"例：ストレスをコントロールする方法を学び、しんどい状況を改善させてい"%>
+<div class='preparations-background'>
+  <div class='preparations'>
+    <%= form_with model: @preparation, url: book_preparations_path(@book.id), local: true do |f| %>
+     <div class='preparation'>
+      <b class='new-preparation-title'>メンタルマップ</b>
+      <div class='new-preparation'>なぜこの本を読もうと思ったのか？</div> 
+      <div class='new-preparation-from'>
+        <%=f.text_area :reason,class:"preparation-from", placeholder:"例：1ヶ月に体重を１キロずつ落としたい"%>
+      </div>
+      <div class='new-preparation'>この本から何を得たいのか？</div>
+      <div class='new-preparation-from'>
+        <%=f.text_area :get_ability,class:"preparation-from", placeholder:"例：異動先の若手と良好な関係を築くためのノウハウが知りたい"%>
+      </div>
+      <div class='new-preparation'>読んだ後、どのような状態になりたいと願っているのか？</div>
+      <div class='new-preparation-from'>
+        <%=f.text_area :status,class:"preparation-from", placeholder:"例：ストレスをコントロールする方法を学び、しんどい状況を改善させてい"%>
+      </div>
+      <b class='new-preparation-title'>ギュリオシティーギャップ</b>
+      <div class='new-preparation'>自分があらかじめ持っている知識</div> 
+      <div class='new-preparation-from'>
+        <%=f.text_area :prior_knowledge,class:"preparation-from", placeholder:"例：ストーリーテリングについて"%>
+      </div>
+      <div class='new-preparation'>本の中に書かれた自分が知らない知識</div> 
+      <div class='new-preparation-from'>
+        <%=f.text_area :unknown,class:"preparation-from", placeholder:"例：マインドフルスピーキングとは？"%>
+      </div>
+  
+      <div class='btn'>
+        <%= f.submit "登録する" ,class:"sell-btn" %> 
+      </div>
+    <%end%>
   </div>
-
-  <div class='curiosity-gap'>
-    <div class='curiosity-gap-text'>ギュリオシティーギャップ</div>
-    <div class='prior-knowledge'>自分があらかじめ持っている知識</div> 
-    <%=f.text_area :prior_knowledge,class:"prior-knowledge", placeholder:"例：ストーリーテリングについて"%>
-    <div class='unknown'>本の中に書かれた自分が知らない知識</div> 
-    <%=f.text_area :unknown,class:"unknown", placeholder:"例：マインドフルスピーキングとは？"%>
-  </div>
-  <div class='login-red-btn'>
-    <%= f.submit "登録する" ,class:"sell-btn" %> 
-  </div>
-  <%end%>
 </div>

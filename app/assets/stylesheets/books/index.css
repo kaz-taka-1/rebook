@@ -62,7 +62,7 @@
 .book-index{
   width: 100vw;
   height: 100vh; 
-  background-image: url(top.jpg);
+  background-image: url('top.jpg');
   background-size: 100vw;
   display: flex;
   justify-content: space-around;

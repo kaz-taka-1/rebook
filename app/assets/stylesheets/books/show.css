@@ -3,7 +3,7 @@
   width: 100vw;
   display: flex;
   justify-content:space-around;
-  background-image: url(top2.jpg);
+  background-image: url('top2.jpg');
   align-items: center;
 }
 
@@ -37,7 +37,7 @@
   display: flex;
   justify-content:space-around;
   background-size:contain;
-  background-image: url(8302caf80e5ff1dfded5d6d6f6c7b692.png);
+  background-image: url('8302caf80e5ff1dfded5d6d6f6c7b692.png');
   align-items: center;
   background-repeat: no-repeat;
   background-size: cover;
