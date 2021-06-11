@@ -90,6 +90,8 @@
 }
 .book-top-title{
   font-size: 20%;
+  font-style:none;
+  text-decoration: none;
 }
 .book-top-page{
   font-size: 20%;
