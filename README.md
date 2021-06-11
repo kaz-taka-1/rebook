@@ -106,6 +106,9 @@ belongs_to :book
 belongs_to :book
 
 # ローカルでの動作方法
+1.git clone https://github.com/kaz-taka-1/rebook
+2.bundle install
+3.yarn install
 
 # 使用言語・技術
 ruby
