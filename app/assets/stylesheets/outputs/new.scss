@@ -2,7 +2,7 @@
   height:100vh;
   width: 100vw;
   background-size:contain;
-  background-image: image-url('top2.jpg');
+  background-image: url('top2.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   display: flex;
@@ -37,7 +37,7 @@
   height: 90%;
   display: flex;
   justify-content:center;
-  background-image: image-url('p0050_m.jpeg');
+  background-image: url('p0050_m.jpeg');
 }
 .out-box{
   width: 500px;

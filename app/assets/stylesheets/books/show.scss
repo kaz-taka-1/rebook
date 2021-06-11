@@ -1,9 +1,9 @@
 .background{
-  height: 100vh;
-  width: 100vw;
+  height: 100%;
+  width: 100%;
   display: flex;
   justify-content:space-around;
-  background-image: image-url('top2.jpg');
+  background-image: url('top2.jpg');
   align-items: center;
 }
 
@@ -21,10 +21,10 @@
 }
 
 .book-show-img{
-  max-width:700px;
-  max-height:700px;
-  min-width:500px;
-  min-height:500px;
+  max-width:500px;
+  max-height:500px;
+  min-width:400px;
+  min-height:400px;
 }
 
 .book-show-image{
@@ -37,7 +37,7 @@
   display: flex;
   justify-content:space-around;
   background-size:contain;
-  background-image: image-url('8302caf80e5ff1dfded5d6d6f6c7b692.png');
+  background-image: url('book.png');
   align-items: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -47,7 +47,7 @@
   height: 80%;
   justify-content: center;
   flex-direction: column; 
-  margin-left:100px;
+  margin-left:200px;
 }
 .book-show-preparation{
   width: 95%;

@@ -5,7 +5,7 @@
       <%= form_with model: @output, url:book_output_path(@book.id,@output.id),local: true do |f| %>
         <div class='out-text'>本の要約を入力</div>
         <div class='output-box'>
-          <%= f.text_area :text, class:"output-form", placeholder:"本の要約を入力",size: "150x30" %>
+          <%= f.text_area :text, class:"output-form", placeholder:"本の要約を入力",size: "110x25" %>
         </div>
         <div class='btn'>
          <%= f.submit "登録する" ,class:"sell-btn" %> 

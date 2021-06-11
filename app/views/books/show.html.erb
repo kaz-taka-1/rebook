@@ -3,8 +3,8 @@
 <div class='action-icons'>
 
  
-  <ul class='book-info'>
-  <li class='book-show'>
+  <div class='book-info'>
+  <div class='book-show'>
     <%= link_to edit_book_path(book_id:@book.id),method: :get do %>
     <div class='book-show-image'>
       <%= image_tag @book.image, class: "book-show-img" %>
@@ -16,8 +16,8 @@
       <%= @book.total_page %>ページ
     </div>
     <%end%>
-  </li>
-  </ul>
+  </div>
+  </div>
   
   
 

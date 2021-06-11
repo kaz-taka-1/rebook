@@ -3,7 +3,7 @@
 <div class='book-add-main'>
 
   <div class="book-add">
-    <%= form_with model: @book, local: true do |f| %>
+    <%= form_with model: @book, url:edit_book_path(@book.id),local: true do |f| %>
     <h3 class='book-new'>本の内容を入力</h3>
     <p class='book-add-title'> 本のタイトル</p>
     <div class='book-add-title'>
