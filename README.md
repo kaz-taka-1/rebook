@@ -14,7 +14,7 @@
 
 # デプロイ後のURL
 https://re3-book.herokuapp.com/
-# テス用トアカウント
+# テスト用アカウント
 ニックネーム：user1
 メールアドレス：test@mail
 パスワード：11111a
@@ -111,11 +111,12 @@ belongs_to :book
 3.yarn install
 
 # 使用言語・技術
-ruby
-Ruby
-Ruby on Rails
-HTML/CSS
-SQL
+- ruby
+- Ruby
+- Ruby on Rails
+- HTML/CSS
+- SQL
+- JavaScript
 
 
 
