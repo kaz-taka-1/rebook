@@ -1,4 +1,5 @@
 class OutputsController < ApplicationController
+  before_action :authenticate_user!
   def new
     @book=Book.find(params[:book_id])
     @output=Output.new

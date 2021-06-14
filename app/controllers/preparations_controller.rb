@@ -1,4 +1,6 @@
 class PreparationsController < ApplicationController
+  before_action :authenticate_user!
+  
   def index
     @book= Book.find(params[:book_id])
     @preparation=Preparation.find_by(book_id:@book.id)
