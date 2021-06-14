@@ -12,14 +12,14 @@
 .right-content{
   display: flex;
   justify-content: flex-end;
-  color: white;
-
+  
 }
 .left{
   width: 100px;
 }
 .center-content{
-  position: absolute;
+  width:100 px;
+  color: white;
 }
 .sarch-form{
   background-image: url('re3-book.png');
@@ -27,9 +27,6 @@
 
 }
 
-.sarch-form{
-  color: white;
-}
 .login {
   width: 5vw;
   padding: 0px auto ;
