@@ -2,7 +2,7 @@
   height:100vh;
   width: 100vw;
   background-size:contain;
-  background-image: url('top2.jpg');
+  background-image: image-url('/assets/outputs/retop2.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   display: flex;
@@ -37,7 +37,7 @@
   height: 700px;
   display: flex;
   justify-content:center;
-  background-image: url('p0050_m.jpeg');
+  background-image: url('/assets/outputs/repage.jpg');
 }
 .out-box{
   width: 500px;
