@@ -1,5 +1,6 @@
 class BooksController < ApplicationController
   before_action :authenticate_user!, except: [:index]
+  before_action :set_gate, except: [:index,:new,:create]
   def index
     @book = Book.includes(:user).order("created_at DESC")
   end
@@ -7,8 +8,8 @@ class BooksController < ApplicationController
   def new
     @book=Book.new
   end
-  def create
 
+  def create
     @book = Book.new(book_params)
     if @book.save
       redirect_to books_path
@@ -16,8 +17,17 @@ class BooksController < ApplicationController
       render :new
     end
   end
+
   def edit
-    @book= Book.find(params[:id])
+    @book = Book.find(params[:id])
+  end
+
+  def update
+    if @book.update(book_params)
+      redirect_to book_path(@book.id)
+    else
+      render :edit
+    end
   end
 
   def show
@@ -30,8 +40,13 @@ class BooksController < ApplicationController
     end
   end
   
-
+  private
   def book_params
     params.require(:book).permit(:book_title, :author, :total_page, :image).merge(user_id: current_user.id)
+  end
+
+  def set_gate
+    @book = Book.find(params[:id])
+    redirect_to books_path if current_user.id != @book.user_id 
   end
 end

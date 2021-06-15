@@ -1,7 +1,7 @@
 <%= render "shared/header" %>
 <div class='preparations-background'>
   <div class='preparations'>
-    <%= form_with model: @preparation, url: book_preparations_path(@book.id), local: true do |f| %>
+    <%= form_with model: @preparation, url: book_preparation_path(@book.id), local: true do |f| %>
      <div class='preparation'>
       <b class='new-preparation-title'>メンタルマップ</b>
       <div class='new-preparation'>なぜこの本を読もうと思ったのか？</div> 

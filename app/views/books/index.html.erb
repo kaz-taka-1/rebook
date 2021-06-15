@@ -16,7 +16,7 @@
       <%= link_to book_path(book.id) do %>
         <li class='list'>
           <div class='book-image'>
-            <%= image_tag book.image, class: "book-img" %>
+            <%= image_tag book.image, class: "book-img" if book.image.attached? %>
           </div>
             <p class='book-top-title'>本のタイトル：<%= book.book_title %></p>
             <p class='book-top-author'>著者：<%= book.author %></p>

@@ -17,10 +17,11 @@ class OutputsController < ApplicationController
     @book=Book.find(params[:book_id])
     @output=Output.find_by(book_id:@book.id)
   end
+  
   def update
     @book=Book.find(params[:book_id])
-    @output=Output.new(output_params)
-    if @output.save
+    @output=Output.find(params[:id])
+    if @output.update(output_params)
       redirect_to book_path(@book.id)
     else
       render :edit
@@ -28,7 +29,7 @@ class OutputsController < ApplicationController
   end
   
 
-
+  private
   def output_params
     params.require(:output).permit(:text).merge(book_id:params[:book_id])
   end

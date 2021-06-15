@@ -7,7 +7,7 @@
   <div class='book-show'>
     <%= link_to edit_book_path(book_id:@book.id),method: :get do %>
     <div class='book-show-image'>
-      <%= image_tag @book.image, class: "book-show-img" %>
+      <%= image_tag @book.image, class: "book-show-img" if @book.image.attached? %>
     </div>
     <h3 class='book-show-title'>
         本のタイトル：<%= @book.book_title %>
