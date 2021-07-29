@@ -6,6 +6,20 @@ body{
   font-family: 'メイリオ',
                 'Hiragino Kaku Gothic Pro' sans-serif
 }
+/* box1とbox2を横に並べる設定 */
+.boxA:after{
+  content:"";
+  display: block;
+  clear: both;
+}
+.box1{
+  float: left;
+  width: 50%;
+}
+.box2{
+  float: left;
+  width:50%;
+}
 /* サイト名 */
 .site h1 a{
   color:#000000;
@@ -14,4 +28,28 @@ body{
 .site h1{
   margin:0;
   font-size:30px;
+}
+/* ログイン情報 */
+.login-info ul{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.login-info li a{
+  display: block;
+  padding: 5px;
+  color: #000000;
+  font-size: 14px;
+  text-decoration: none;
+}
+.login-info li a:hover{
+  background-color: #eeeeee;
+}
+.login-info ul:after{ 
+  content:"";
+  clear:both;
+}
+.login-info li {
+  float:right;
+  width: auto;
 }
