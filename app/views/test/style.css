@@ -53,3 +53,36 @@ body{
   float:right;
   width: auto;
 }
+/* ナビゲーション */
+.menu ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.menu li a{
+  display:block;
+  padding: 5px;
+  color: #000000;
+  font-size: 14px;
+  text-decoration: none;
+}
+.menu li a:hover{
+  content: "";
+  display: block;
+  clear:both;
+}
+.menu ul:after{
+  content:"";
+  display:block;
+  clear:both;
+}
+.menu li{
+  float: left;
+  width: auto;
+}
+/* ヘッダー画像 */
+.topimg{
+  max-width:100%;
+  height:auto;
+  vertical-align: bottom;
+}
