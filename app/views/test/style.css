@@ -6,6 +6,7 @@ body{
   font-family: 'メイリオ',
                 'Hiragino Kaku Gothic Pro' sans-serif
 }
+/* ########## 768px 以上 ##########*/
 /* box1とbox2を横に並べる設定 */
 .boxA:after{
   content:"";
@@ -14,11 +15,11 @@ body{
 }
 .box1{
   float: left;
-  width: 50%;
+  width: auto;
 }
 .box2{
-  float: left;
-  width:50%;
+  float: right;
+  width: auto;
 }
 /* サイト名 */
 .site h1 a{
@@ -37,7 +38,7 @@ body{
 }
 .login-info li a{
   display: block;
-  padding: 5px;
+  padding: 10px 15px;
   color: #000000;
   font-size: 14px;
   text-decoration: none;
@@ -85,4 +86,9 @@ body{
   max-width:100%;
   height:auto;
   vertical-align: bottom;
+}
+/* ボックスの左右 */
+.boxA,.box3{
+  padding-left: 15px;
+  padding-right: 15px;
 }
