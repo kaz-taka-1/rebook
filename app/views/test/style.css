@@ -1,0 +1,103 @@
+/* blog&news */
+@charset "UTF-8";
+
+body{
+  margin: 0;
+  font-family: 'メイリオ',
+                'Hiragino Kaku Gothic Pro' sans-serif
+}
+/* ########## 768px 以上 ##########*/
+/* box1とbox2を横に並べる設定 */
+.boxA:after{
+  content:"";
+  display: block;
+  clear: both;
+}
+.box1{
+  float: left;
+  width: auto;
+}
+.box2{
+  float: right;
+  width: auto;
+}
+/* サイト名 */
+.site h1 a{
+  color:#000000;
+  text-decoration: none;
+}
+.site h1{
+  margin:0;
+  font-size:30px;
+}
+/* ログイン情報 */
+.login-info ul{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.login-info li a{
+  display: block;
+  padding: 10px 15px;
+  color: #000000;
+  font-size: 14px;
+  text-decoration: none;
+}
+.login-info li a:hover{
+  background-color: #eeeeee;
+}
+.login-info ul:after{ 
+  content:"";
+  clear:both;
+}
+.login-info li {
+  float:right;
+  width: auto;
+}
+/* ナビゲーション */
+.menu ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.menu li a{
+  display:block;
+  padding: 5px;
+  color: #000000;
+  font-size: 14px;
+  text-decoration: none;
+}
+.menu li a:hover{
+  content: "";
+  display: block;
+  clear:both;
+}
+.menu ul:after{
+  content:"";
+  display:block;
+  clear:both;
+}
+.menu li{
+  float: left;
+  width: auto;
+}
+/* ヘッダー画像 */
+.topimg{
+  max-width:100%;
+  height:auto;
+  vertical-align: bottom;
+}
+/* ボックスの左右 */
+.boxA,.box3{
+  padding-left: 15px;
+  padding-right: 15px;
+}
+/* ボックスの上下 */
+.boxA{
+  padding-top:20px;
+  padding-bottom: 10px;
+}
+.box3{
+  padding-top:10px;
+  padding-bottom: 10px;
+}
