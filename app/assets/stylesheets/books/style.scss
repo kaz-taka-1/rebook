@@ -40,14 +40,15 @@ body{
   padding: 0;
   list-style: none;
 }
-.login-info li a{
+.sign-up,.login,.logout,.user-nickname{
   display: block;
   padding: 10px 15px;
   color: #000000;
   font-size: 14px;
   text-decoration: none;
 }
-.login-info li a:hover{
+
+.sign-up:hover,.login:hover,.logout:hover,.user-nickname:hover{
   background-color: #eeeeee;
 }
 .login-info ul:after{ 
@@ -93,6 +94,7 @@ body{
   height:auto;
   vertical-align: bottom;
 }
+
 /* 本一覧表示 */
 .bottom{
   position: relative;
@@ -108,6 +110,8 @@ body{
 }
 .slides li {
   color: #000000;
+}
+.booklink{
   text-decoration: none;
 }
 
