@@ -16,6 +16,7 @@ body{
 .box1{
   float: left;
   width: auto;
+  
 }
 .box2{
   float: right;
@@ -29,6 +30,9 @@ body{
 .site h1{
   margin:0;
   font-size:30px;
+}
+.site img{
+  border:none
 }
 /* ログイン情報 */
 .login-info ul{
@@ -59,6 +63,7 @@ body{
   margin: 0;
   padding: 0;
   list-style: none;
+  text-align: center; 
 }
 .menu li a{
   display:block;
@@ -71,6 +76,7 @@ body{
   content: "";
   display: block;
   clear:both;
+  background-color: #eeeeee;
 }
 .menu ul:after{
   content:"";
@@ -78,7 +84,7 @@ body{
   clear:both;
 }
 .menu li{
-  float: left;
+  display: inline-block;
   width: auto;
 }
 /* ヘッダー画像 */
@@ -96,8 +102,10 @@ body{
 .boxA{
   padding-top:20px;
   padding-bottom: 10px;
+  background-color: blue;
 }
 .box3{
   padding-top:10px;
   padding-bottom: 10px;
+  background-color: rebeccapurple;
 }

@@ -1,0 +1,32 @@
+
+<%= render "shared/header" %>
+
+  <div class='top-content'>
+    <div class='title'>書籍一覧</div> 
+    <%= link_to '本を追加する',new_book_path, class: 'book-btn'  %>
+   </div>
+
+<div class='book-index'>
+<div class="slider">
+  
+  <ul class="slides">
+    <%num=0%>
+    <% @book.each do |book|%>
+      <div id=slide-<%num%>>
+      <%= link_to book_path(book.id) do %>
+        <li class='list'>
+          <div class='book-image'>
+            <%= image_tag book.image, class: "book-img" if book.image.attached? %>
+          </div>
+            <p class='book-top-title'>本のタイトル：<%= book.book_title %></p>
+            <p class='book-top-author'>著者：<%= book.author %></p>
+            <span class='book-top-page'><%= book.total_page %>ページ</span>
+        </li>
+      <% end %>
+      <%num=num+1%>
+      </div>
+    <% end %> 
+  </ul>
+  </div>
+</div>
+</div>
