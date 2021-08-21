@@ -87,12 +87,30 @@ body{
   display: inline-block;
   width: auto;
 }
-/* ヘッダー画像 */
-.topimg{
+/* 背景画像 */
+.backimg{
   max-width:100%;
   height:auto;
   vertical-align: bottom;
 }
+/* 本一覧表示 */
+.bottom{
+  position: relative;
+}
+.slider{
+  position: absolute;
+  top: 2%;
+  left: 5% ;
+  color: #eeeeee;
+}
+.slides ul {
+  list-style: none;
+}
+.slides li {
+  color: #000000;
+  text-decoration: none;
+}
+
 /* ボックスの左右 */
 .boxA,.box3{
   padding-left: 15px;
