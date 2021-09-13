@@ -16,6 +16,7 @@ body{
 .box1{
   float: left;
   width: auto;
+  
 }
 .box2{
   float: right;
@@ -23,12 +24,15 @@ body{
 }
 /* サイト名 */
 .site h1 a{
-  color:#000000;
+  
   text-decoration: none;
 }
 .site h1{
   margin:0;
   font-size:30px;
+}
+.site img{
+  border:none
 }
 /* ログイン情報 */
 .login-info ul{
@@ -36,14 +40,15 @@ body{
   padding: 0;
   list-style: none;
 }
-.login-info li a{
+.sign-up,.login,.logout,.user-nickname{
   display: block;
   padding: 10px 15px;
   color: #000000;
   font-size: 14px;
   text-decoration: none;
 }
-.login-info li a:hover{
+
+.sign-up:hover,.login:hover,.logout:hover,.user-nickname:hover{
   background-color: #eeeeee;
 }
 .login-info ul:after{ 
@@ -59,11 +64,12 @@ body{
   margin: 0;
   padding: 0;
   list-style: none;
+  text-align: center; 
 }
 .menu li a{
   display:block;
   padding: 5px;
-  color: #000000;
+  color: #eeeeee;
   font-size: 14px;
   text-decoration: none;
 }
@@ -71,6 +77,7 @@ body{
   content: "";
   display: block;
   clear:both;
+  background-color: rgb(005, 033, 092);
 }
 .menu ul:after{
   content:"";
@@ -78,15 +85,39 @@ body{
   clear:both;
 }
 .menu li{
-  float: left;
+  display: inline-block;
   width: auto;
 }
-/* ヘッダー画像 */
-.topimg{
+.book-btn{
+  color:white;
+}
+/* 背景画像 */
+.backimg{
   max-width:100%;
   height:auto;
   vertical-align: bottom;
 }
+
+/* 本一覧表示 */
+.bottom{
+  position: relative;
+}
+.slider{
+  position: absolute;
+  top: 2%;
+  left: 5% ;
+  color: #eeeeee;
+}
+.slides ul {
+  list-style: none;
+}
+.slides li {
+  color: #000000;
+}
+.booklink{
+  text-decoration: none;
+}
+
 /* ボックスの左右 */
 .boxA,.box3{
   padding-left: 15px;
@@ -96,8 +127,10 @@ body{
 .boxA{
   padding-top:20px;
   padding-bottom: 10px;
+  background-color: rgb(255, 255, 255);
 }
 .box3{
   padding-top:10px;
   padding-bottom: 10px;
+  background-color:rgb(001, 093, 1782);
 }
