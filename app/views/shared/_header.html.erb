@@ -3,7 +3,11 @@
    <div class = "boxA">
       <div class="box1">
         <div class="site">
-           <h1><a href="#"><img src="/assets/books/titlelogo.png" alt="re3-book" width="250" height="40"></a></h1>
+           <h1>
+            <%= link_to books_path do%>
+              <img src="/assets/books/titlelogo.png" alt="re3-book" width="250" height="40">
+            <%end%>
+          </h1>
         </div>
       </div>
       <div class = "box2">
