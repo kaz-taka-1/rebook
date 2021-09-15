@@ -19,41 +19,49 @@
           <%= image_tag @book.image.variant(resize: '350x500'), class: "book-img" %>
           <%if Preparation.exists?(book_id:@book.id)%>
               <ul>
-                <li><%= link_to 'メンタルマップ',edit_book_preparation_path(@book.id,@preparation.id) %></li>
+                <li>メンタルマップ</li>
                 <li>なぜこの本を読もうと思ったのか？</li> 
                 <%=@preparation.reason%>
-                <li><%= link_to 'この本から何を得たいのか？',edit_book_preparation_path(@book.id,@preparation.id) %></li>
+                <li>この本から何を得たいのか？</li>
                 <%=@preparation.get_ability%>
-                <li><%= link_to '読んだ後、どのような状態になりたいと願っているのか？',edit_book_preparation_path(@book.id,@preparation.id) %></li>
+                <li>読んだ後、どのような状態になりたいと願っているのか？</li>
                 <%=@preparation.status%>
-                <li><%= link_to 'ギュリオシティーギャップ',edit_book_preparation_path(@book.id,@preparation.id) %></li>
-                <li><%= link_to '自分があらかじめ持っている知識',edit_book_preparation_path(@book.id,@preparation.id) %></li> 
+                <li>ギュリオシティーギャップ</li>
+                <li>自分があらかじめ持っている知識/li> 
                 <%=@preparation.prior_knowledge%>
-                <li><%= link_to '本の中に書かれた自分が知らない知識',edit_book_preparation_path(@book.id,@preparation.id) %></li> 
+                <li>本の中に書かれた自分が知らない知識</li> 
                 <%=@preparation.unknown%>
               </ul>
           <%else%>
             <div class='preparation-list'>
               <ul>
                 <li>読む前の準備</li>
-                <li><%= link_to 'メンタルマップ',new_book_preparation_path(@book.id) %></li>
-                <li><%= link_to 'キュリオシティギャップ',new_book_preparation_path(@book.id) %></li>
-                <li><%= link_to '記入',new_book_preparation_path(@book.id) %></li>
+                <li>メンタルマップ'</li>
+                <li>キュリオシティギャップ</li>
+                <li>記入</li>
               </ul>
             </div>
           <%end%>
         </div>
+        <div class="button">
+          <%if Preparation.exists?(book_id:@book.id)%>
+            <button><%= link_to '編集',edit_book_preparation_path(@book.id,@preparation.id) %></button>
+          <%else%>
+            <button><%= link_to '編集',new_book_preparation_path(@book.id) %></button>
+          <%end%>
+        </div>
       </div>
       <div class="box7">
-      <%if Output.exists?(book_id:@book.id)%>
-        <h1>
-        <%= link_to edit_book_output_path(book_id:@book.id) do %>
-        <%=@output.text%>
+        <%if Output.exists?(book_id:@book.id)%>
+          <h1><%=@output.text%></h1>
+          <div class="button">
+            <button><%= link_to '編集',edit_book_output_path(book_id:@book.id) %></button>
+          </div>
+        <%else%>
+          <div class="button">
+            <button><%= link_to '要約の記入',new_book_output_path(book_id:@book.id) %></button>
+          </div>
         <%end%>
-        </h1>
-      <%else%>
-        <h1><%= link_to '要約の記入',new_book_output_path(book_id:@book.id) %></h1>
-      <%end%>
       </div>
   </div>
 
