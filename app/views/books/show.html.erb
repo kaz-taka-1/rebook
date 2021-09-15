@@ -43,6 +43,13 @@
             </div>
           <%end%>
         </div>
+        <div class="button">
+          <%if Preparation.exists?(book_id:@book.id)%>
+            <button><%= link_to '編集',edit_book_preparation_path(@book.id,@preparation.id) %></button>
+          <%else%>
+            <button><%= link_to '編集',new_book_preparation_path(@book.id) %></button>
+          <%end%>
+        </div>
       </div>
       <div class="box7">
       <%if Output.exists?(book_id:@book.id)%>

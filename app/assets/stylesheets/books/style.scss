@@ -152,7 +152,6 @@ body{
   padding-right: 1%;
   padding-top: 1%;
   padding-bottom: 1%;
-  
   margin-left: 10%;
   margin-top: 5%;
   background-color: #eeeeee;
@@ -173,6 +172,10 @@ body{
   border: solid 10px rgb(005, 033, 092);
   overflow-wrap: break-word;
   overflow: scroll;
+}
+.button{
+  display:block;
+  text-align: center;
 }
 
 //背景
@@ -195,10 +198,14 @@ body{
   clear:both;
   background-color: rgb(127, 167, 252);
 }
-
 .box7 h1 a{
   text-decoration: none;
   color: #000000;
+}
+.button a{
+  text-decoration: none;
+  color: #000000;
 } 
+
 
 
