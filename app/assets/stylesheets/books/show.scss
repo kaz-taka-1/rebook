@@ -1,11 +1,11 @@
-.background{
+/*.background{
   height: 100%;
   width: 100%;
   display: flex;
   justify-content:space-around;
   background-image: image-url('/assets/books/retop2.jpg');
   align-items: center;
-}
+}*/
 
 .book-info{
     width: 30%;
@@ -37,7 +37,7 @@
   display: flex;
   justify-content:space-around;
   background-size:contain;
-  background-image: image-url('/assets/books/rebook.png');
+  //background-image: image-url('/assets/books/rebook.png');
   align-items: center;
   background-repeat: no-repeat;
   background-size: cover;

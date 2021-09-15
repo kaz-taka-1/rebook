@@ -1,89 +1,62 @@
-<%= render "shared/header" %>
-<div class='background'>
-<div class='action-icons'>
-
- 
-  <div class='book-info'>
-  <div class='book-show'>
-    <%= link_to edit_book_path(book_id:@book.id),method: :get do %>
-    <div class='book-show-image'>
-      <%= image_tag @book.image, class: "book-show-img" if @book.image.attached? %>
-    </div>
-    <h3 class='book-show-title'>
-        本のタイトル：<%= @book.book_title %>
-    </h3>
-    <div class='show-level-of-achievement'>
-      <%= @book.total_page %>ページ
-    </div>
+<!DOCTYPE HTML>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <link href='http://fonts.googleapis.com/css?family=Paytone+One' rel='stylesheet' type='text/css'>
+    <link href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" rel='stylesheet'>
+    <link rel="stylesheet" href="style.scss">
     
-    <%end%>
-  </div>
-  <div class="progress-pie-chart" data-percent="5">
-        <div class="ppc-progress">
-          <div class="ppc-progress-fill"></div>
-          </div>
-        <div class="ppc-percents">
-          <div class="pcc-percents-wrapper">
-            <span>%</span>
-          </div>
-        </div>
-    </div>
-  </div>
-  
-  
 
-  <div class='action-icon'>
-    <%if Preparation.exists?(book_id:@book.id)%>
-    <%= link_to edit_book_preparation_path(@book.id,@preparation.id) do%>
-    <div class='book-show-preparation'>
-      <div class='mental-map'>メンタルマップ</div>
-      <div class='reason'>なぜこの本を読もうと思ったのか？</div> 
-      <%=@preparation.reason%>
-      <div class='get-ability'>この本から何を得たいのか？</div>
-      <%=@preparation.get_ability%>
-      <div class='status'>読んだ後、どのような状態になりたいと願っているのか？</div>
-      <%=@preparation.status%>
-      <div class='curiosity-gap-text'>ギュリオシティーギャップ</div>
-      <div class='prior-knowledge'>自分があらかじめ持っている知識</div> 
-      <%=@preparation.prior_knowledge%>
-      <div class='unknown'>本の中に書かれた自分が知らない知識</div> 
-      <%=@preparation.unknown%>
-      <%end%>
-    </div>
-    <%else%>
-    <div class='book-show-preparation'>
-      <%= link_to new_book_preparation_path(@book.id) do%>
-      <h1>読む前の準備</h1>
-      <ul class='preparation-list'>
-        <li>メンタルマップ</li>
-        <li>キュリオシティギャップ</li>
-        <li>記入</li>
-      </ul>
-      <%end%>
-    </div>
-    <%end%>
-    <div class='book-show-output'>
+    <title>re3-book</title>
+  </head>
+  <body>
+  <%= render "shared/header" %>
+  <div class="box5">
+    <div class="boxB">
+      <div class="box6">
+        <div class="leftcontent">
+          <%= image_tag @book.image.variant(resize: '350x500'), class: "book-img" %>
+          <%if Preparation.exists?(book_id:@book.id)%>
+              <ul>
+                <li><%= link_to 'メンタルマップ',edit_book_preparation_path(@book.id,@preparation.id) %></li>
+                <li>なぜこの本を読もうと思ったのか？</li> 
+                <%=@preparation.reason%>
+                <li><%= link_to 'この本から何を得たいのか？',edit_book_preparation_path(@book.id,@preparation.id) %></li>
+                <%=@preparation.get_ability%>
+                <li><%= link_to '読んだ後、どのような状態になりたいと願っているのか？',edit_book_preparation_path(@book.id,@preparation.id) %></li>
+                <%=@preparation.status%>
+                <li><%= link_to 'ギュリオシティーギャップ',edit_book_preparation_path(@book.id,@preparation.id) %></li>
+                <li><%= link_to '自分があらかじめ持っている知識',edit_book_preparation_path(@book.id,@preparation.id) %></li> 
+                <%=@preparation.prior_knowledge%>
+                <li><%= link_to '本の中に書かれた自分が知らない知識',edit_book_preparation_path(@book.id,@preparation.id) %></li> 
+                <%=@preparation.unknown%>
+              </ul>
+          <%else%>
+            <div class='preparation-list'>
+              <ul>
+                <li>読む前の準備</li>
+                <li><%= link_to 'メンタルマップ',new_book_preparation_path(@book.id) %></li>
+                <li><%= link_to 'キュリオシティギャップ',new_book_preparation_path(@book.id) %></li>
+                <li><%= link_to '記入',new_book_preparation_path(@book.id) %></li>
+              </ul>
+            </div>
+          <%end%>
+        </div>
+      </div>
+      <div class="box7">
       <%if Output.exists?(book_id:@book.id)%>
+        <h1>
         <%= link_to edit_book_output_path(book_id:@book.id) do %>
         <%=@output.text%>
         <%end%>
+        </h1>
       <%else%>
-        <%= link_to new_book_output_path(book_id:@book.id) do %>
-        <h1>要約の記入</h1>
-        <%end%>
+        <h1><%= link_to '要約の記入',new_book_output_path(book_id:@book.id) %></h1>
       <%end%>
-    </div>
+      </div>
   </div>
-  
-  
 
-  <%# <%= link_to edit_book_preparation_path(@book.id,@preparation.id) do %> 
-    <%# <h1>編集する</h1> %>
-  <%# <% end %> 
 
-  
 
-  
-
-  </div>
-</div>
+</body>
