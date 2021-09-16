@@ -4,7 +4,7 @@ class Book < ApplicationRecord
   validate :total_page
 
   belongs_to :user
-  has_one :preparation
-  has_one :output
+  has_one :preparation,dependent: :destroy
+  has_one :output,dependent: :destroy
   has_one_attached :image
 end

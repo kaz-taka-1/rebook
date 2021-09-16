@@ -1,6 +1,6 @@
 class BooksController < ApplicationController
   before_action :authenticate_user!, except: [:index]
-  before_action :set_gate, except: [:index,:new,:create]
+  before_action :set_gate, except: [:index,:new,:create,:detroy]
   def index
     @book = Book.includes(:user).order("created_at DESC")
   end
@@ -38,6 +38,12 @@ class BooksController < ApplicationController
     if Output.exists?(book_id:@book.id)
       @output=Output.find_by(book_id:@book.id)
     end
+  end
+
+  def destroy
+    @book = Book.find(params[:id])
+    @book.destroy
+    redirect_to books_path
   end
   
   private
