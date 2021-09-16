@@ -19,28 +19,30 @@
       </div>
       <div class="box6">
         <div class="leftcontent">
-          <%= image_tag @book.image.variant(resize: '350x500'), class: "book-img" %>
+          <div class="image">
+            <%= image_tag @book.image.variant(resize: '350x500'), class: "book-img" %>
+          </div>
           <%if Preparation.exists?(book_id:@book.id)%>
               <ul>
-                <li>メンタルマップ</li>
-                <li>なぜこの本を読もうと思ったのか？</li> 
-                <%=@preparation.reason%>
-                <li>この本から何を得たいのか？</li>
-                <%=@preparation.get_ability%>
-                <li>読んだ後、どのような状態になりたいと願っているのか？</li>
-                <%=@preparation.status%>
-                <li>ギュリオシティーギャップ</li>
-                <li>自分があらかじめ持っている知識/li> 
-                <%=@preparation.prior_knowledge%>
-                <li>本の中に書かれた自分が知らない知識</li> 
-                <%=@preparation.unknown%>
+                <li>ーーメンタルマップーー</li>
+                <li>・なぜこの本を読もうと思ったのか？</li> 
+                <div class="comment"><%=@preparation.reason%></div>
+                <li>・この本から何を得たいのか？</li>
+                <div class="comment"><%=@preparation.get_ability%></div>
+                <li>・読んだ後、どのような状態になりたいと願っているのか？</li>
+                <div class="comment"><%=@preparation.status%></div>
+                <li>ーーギュリオシティーギャップーー</li>
+                <li>・自分があらかじめ持っている知識</li> 
+                <div class="comment"><%=@preparation.prior_knowledge%></div>
+                <li>・本の中に書かれた自分が知らない知識</li> 
+                <div class="comment"><%=@preparation.unknown%></div>
               </ul>
           <%else%>
             <div class='preparation-list'>
               <ul>
-                <li>読む前の準備</li>
-                <li>メンタルマップ'</li>
-                <li>キュリオシティギャップ</li>
+                <li>ーー読む前の準備ーー</li>
+                <li>・メンタルマップ'</li>
+                <li>・キュリオシティギャップ</li>
               </ul>
             </div>
           <%end%>
