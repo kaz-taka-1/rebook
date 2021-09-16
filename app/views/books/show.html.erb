@@ -24,14 +24,18 @@
           </div>
           <%if Preparation.exists?(book_id:@book.id)%>
               <ul>
-                <li>ーーメンタルマップーー</li>
+                <div class="title1">
+                  <li>ーーメンタルマップーー</li>
+                </div>
                 <li>・なぜこの本を読もうと思ったのか？</li> 
                 <div class="comment"><%=@preparation.reason%></div>
                 <li>・この本から何を得たいのか？</li>
                 <div class="comment"><%=@preparation.get_ability%></div>
                 <li>・読んだ後、どのような状態になりたいと願っているのか？</li>
                 <div class="comment"><%=@preparation.status%></div>
-                <li>ーーギュリオシティーギャップーー</li>
+                <div class="title1">
+                  <li>ーーギュリオシティーギャップーー</li>
+                </div>
                 <li>・自分があらかじめ持っている知識</li> 
                 <div class="comment"><%=@preparation.prior_knowledge%></div>
                 <li>・本の中に書かれた自分が知らない知識</li> 
@@ -40,7 +44,9 @@
           <%else%>
             <div class='preparation-list'>
               <ul>
-                <li>ーー読む前の準備ーー</li>
+                <div class="title1">
+                  <li>ーー読む前の準備ーー</li>
+                </div>
                 <li>・メンタルマップ'</li>
                 <li>・キュリオシティギャップ</li>
               </ul>
@@ -57,7 +63,8 @@
       </div>
       <div class="box7">
         <%if Output.exists?(book_id:@book.id)%>
-          <h1><%=@output.text%></h1>
+          <h1 class=title1>要約</h1>
+          <p><%=@output.text%></p>
           <div class="button">
             <button><%= link_to '編集',edit_book_output_path(book_id:@book.id) %></button>
           </div>
