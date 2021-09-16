@@ -14,6 +14,9 @@
   <%= render "shared/header" %>
   <div class="box5">
     <div class="boxB">
+      <div class="d_button"> 
+        <button><%= link_to '本を消去する',book_path(@book.id), method: :delete %></button>
+      </div>
       <div class="box6">
         <div class="leftcontent">
           <%= image_tag @book.image.variant(resize: '350x500'), class: "book-img" %>
@@ -62,6 +65,7 @@
           </div>
         <%end%>
       </div>
+    </div>
   </div>
 
 
