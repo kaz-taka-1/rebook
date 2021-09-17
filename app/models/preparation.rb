@@ -1,10 +1,10 @@
 class Preparation < ApplicationRecord
-  validate :reason
-  validate :get_ability
-  validate :status
-  validate :prior_knowledge
-  validate :unknown
-  validate :book_id
+  validates :reason, presence: true
+  validates :get_ability, presence: true
+  validates :status, presence: true
+  validates :prior_knowledge, presence: true
+  validates :unknown, presence: true
+  validates :book_id, presence: true
 
   belongs_to :book
 end

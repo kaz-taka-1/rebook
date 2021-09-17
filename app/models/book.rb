@@ -1,7 +1,7 @@
 class Book < ApplicationRecord
-  validate :book_title
-  validate :author
-  validate :total_page
+  validates :book_title, presence: true
+  validates :author, presence: true
+  validates :total_page, presence: true
 
   belongs_to :user
   has_one :preparation,dependent: :destroy
