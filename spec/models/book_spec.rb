@@ -3,11 +3,15 @@ require 'rails_helper'
 RSpec.describe Book, type: :model do
   before do
     @book = FactoryBot.build(:book)
+    @user = FactoryBot.create(:user)
+    @book.user_id = @user.id
   end
   describe '新規本登録' do
     context '新規本登録できるとき' do
       it 'book_titleとautor、totalpageが存在すれば登録できる' do
+        binding.pry
         expect(@book).to be_valid
+        binding.pry
       end
       it 'imageがなくても登録できる' do
         @book.image = ''
@@ -33,3 +37,4 @@ RSpec.describe Book, type: :model do
     end
   end
 end
+
